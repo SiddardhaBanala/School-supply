@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>School Supply — PWA</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+  <!-- LOGIN SCREEN -->
+  <div id="login-screen" class="screen">
+    <h1>School Supply</h1>
+    <input id="username" placeholder="Username">
+    <input id="pin" placeholder="PIN" type="password" maxlength="6">
+    <button id="loginBtn">Login</button>
+    <div id="loginMsg" class="muted"></div>
+  </div>
+
+  <!-- DASHBOARD SCREEN -->
+  <div id="dashboard-screen" class="screen hidden">
+    <header>
+      <h2 id="welcome"></h2>
+      <button id="logoutBtn">Logout</button>
+    </header>
+
+    <main>
+
+      <!-- SCHOOL UI -->
+      <div id="school-ui" class="hidden">
+        <h3>Place Order</h3>
+        <select id="itemSelect">
+          <option>Meat</option>
+          <option>Milk</option>
+          <option>Eggs</option>
+          <option>Groceries</option>
+        </select>
+        <input id="qty" placeholder="Quantity">
+        <input id="dateFor" type="date">
+        <textarea id="note" placeholder="Optional note"></textarea>
+        <button id="placeOrder">Place Order</button>
+
+        <h4>Your Past Orders</h4>
+        <ul id="ordersList"></ul>
+      </div>
+
+      <!-- ADMIN UI -->
+      <div id="admin-ui" class="hidden">
+        <h3>Add Delivery Entry</h3>
+        <input id="admin_school" placeholder="School ID e.g. SCH001">
+        <select id="admin_item">
+          <option>Meat</option>
+          <option>Milk</option>
+          <option>Eggs</option>
+          <option>Groceries</option>
+        </select>
+        <input id="admin_qty" placeholder="Quantity">
+        <input id="admin_date" type="date">
+        <button id="addEntryBtn">Add Entry</button>
+
+        <h4>Pending Orders</h4>
+        <ul id="pendingOrders"></ul>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
