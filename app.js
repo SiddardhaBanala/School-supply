@@ -1,5 +1,6 @@
 // app.js
-const API_URL = 'https://script.google.com/macros/s/AKfycbyc5G2Eo3gGYq7ywicq2pcwIC6zMJVHgIh5NcejoNBhl77MY6jnkqoSPgYbRY-yzRNbmQ/exec';
+const API_URL = "https://script.google.com/macros/s/AKfycbyc5G2Eo3gGYq7ywicq2pcwIC6zMJVHgIh5NcejoNBhl77MY6jnkqoSPgYbRY-yzRNbmQ/exec";
+
 
 function $(id) { return document.getElementById(id) }
 
